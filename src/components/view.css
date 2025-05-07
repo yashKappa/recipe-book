@@ -1,0 +1,162 @@
+.view-container {
+  color: #ECEFCA; /* pale yellow */
+}
+
+.view-container h3 {
+  color: #000000;
+  font-weight: 600;
+}
+
+.form-control {
+  background-color: #94B4C1;
+  border: 1px solid #547792;
+  color: #213448;
+  font-weight: 500;
+}
+
+.form-control:focus{
+  box-shadow: 0px 4px 8px #213448 !important;
+  border: none !important;
+}
+
+.form-control::placeholder {
+  color: #213448;
+  opacity: 0.7;
+}
+
+.form-control:focus {
+  border-color: #ECEFCA;
+  box-shadow: 0 0 0 0.15rem rgba(236, 239, 202, 0.3);
+}
+
+.view-container .card {
+  background-color: #213448;
+  color: #ECEFCA;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(33, 52, 72, 0.3);
+  border: none;
+}
+
+.view-container .card:hover{
+  box-shadow: 0px 0px 10px #213448 !important;
+}
+
+.card-title {
+  color: #ECEFCA;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-img-top {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.recipe-grid .btn-primary {
+  background-color: #c9e8ff;
+  border-color: #060e14;
+  color: #181818;
+  font-weight: 500;
+}
+
+.recipe-grid .btn-primary:hover {
+  background-color: #6e99b9;
+  border-color: #213448;
+}
+
+.btn-danger {
+  background-color: #ff5757;
+  border-color: #c64e4e;
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background-color: #a83e3e;
+}
+
+.btn-secondary {
+  background-color: #547792;
+  border-color: #547792;
+  color: #ECEFCA;
+}
+
+.btn-secondary:hover {
+  background-color: #213448;
+  border-color: #213448;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+  
+  .recipe-grid .card {
+    height: 100%;
+  }
+
+  .cards{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-data{
+    width: 80%;
+    background-color: #213448;
+    padding: 20px;
+    border-radius: 0.5rem;
+  }
+
+  .cards .view{
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+
+  .cards button{
+    width: 100%;
+    background-color: #dfefff;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border: 2px solid rgb(255, 255, 255);
+  }
+
+  .cards button:hover{
+    background-color: #13375c;
+    color: rgb(255, 255, 255);
+    box-shadow: 0px 4px 8px rgb(26, 26, 26);
+    border: 2px solid white;
+  }
+
+  @media (max-width: 990px) {
+    .recipe-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+      
+      .recipe-grid .card {
+        height: 100%;
+      }
+
+      .card-data{
+        width: 100%;
+        background-color: #213448;
+        padding: 20px;
+        border-radius: 0.5rem;
+      }
+  }
+  

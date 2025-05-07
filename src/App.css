@@ -1,38 +1,164 @@
-.App {
-  text-align: center;
+/* Slide-in Drawer from Right */
+.navbar {
+  background-color: #ffffff00 !important; /* Match card/header background */
+    z-index: 999;
+    margin-top: 3rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav{
+  background-color: #213448 !important; /* Match card/header background */
+  width: 100%;
+  position: fixed;
+  padding: 8px 10px;
+  top: 0%;
+  left: 0%;
+  z-index: 999;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar .navbar-brand{
+  color: #ffffff !important; /* Pale yellow text */
+  font-weight: 500;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar .nav-link {
+  color: #000000 !important; /* Pale yellow text */
+  font-weight: 500;
+  background-color: #dfefff;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 5px;
+  border-radius: 0.3rem;
+  padding: 5px 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar .nav-link:hover {
+  background-color: #e9f9ff !important; /* Light blue hover */
 }
 
-@keyframes App-logo-spin {
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  filter: brightness(0) invert(10); /* Make toggler icon white */
+}
+
+.navbar-toggler-icon:focus {
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.menu-icon{
+  font-size: 2rem; /* Bigger icon */
+  font-weight: bold;
+  background-color: #213448; /* Deep navy or your preferred color */
+  color: #ffffff; /* Light text */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.navbar-brand img {
+  height: 40px;
+  width: 40px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+
+@keyframes slideInFromRight {
   from {
-    transform: rotate(0deg);
+    transform: translateX(100%);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.custom-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60vw; /* as requested earlier */
+  max-width: 400px;
+  height: 100vh;
+  background-color: #213448; /* Deep navy */
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  color: #ECEFCA; /* Pale yellow text */
+}
+
+.custom-drawer.show {
+  animation: slideInFromRight 0.3s forwards;
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #547792; /* medium blue border */
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.drawer-links {
+  list-style: none; /* Removes list bullets */
+  padding: 0;
+  margin: 0;
+  margin-top: 1.5rem;
+}
+
+.drawer-links li {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.drawer-links a {
+  text-decoration: none;
+  color: #000000; /* Pale yellow text */
+  font-weight: 500;
+  transition: color 0.3s ease;
+  background-color: #dfefff;
+  display: block; /* Makes <a> a block-level element */
+  width: 100%;
+  padding: 10px; /* Adds padding inside the <a> for better clickability */
+  border-radius: 0.5rem;
+}
+
+.drawer-links a:hover {
+  color: #94B4C1; /* Icy blue hover */
+}
+
+
+.btn-close {
+  background-color: #ECEFCA;
+  opacity: 0.8;
+  border: none;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+@media (max-width: 990px) {
+  .nav{
+    background-color: #213448 !important;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 3px;
+    z-index: 999;
+  }
+
+  .navbar{
+    z-index: 999;
+    margin-top: 3rem;
   }
 }

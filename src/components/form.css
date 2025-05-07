@@ -1,0 +1,63 @@
+.card .form-card {
+    background-color: #213448; /* deep navy */
+    color: #000000; /* pale yellow */
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(33, 52, 72, 0.3);
+  }
+  
+  .card .form-label {
+    color: #000000;
+    font-weight: 500;
+  }
+  
+  .card .form-control {
+    background-color: #94B4C1;
+    border: 1px solid #547792;
+    color: #213448;
+    font-weight: 500;
+  }
+  
+  .card .form-control::placeholder {
+    color: #213448;
+    opacity: 0.7;
+  }
+  
+  .card .form-control:focus {
+    border-color: #000000;
+    box-shadow: 0 0 0 0.15rem rgba(236, 239, 202, 0.3);
+  }
+  
+  .card .btn-primary {
+    background-color: #547792;
+    border-color: #547792;
+    font-weight: 600;
+    color: #000000;
+  }
+  
+  .card .btn-primary:hover {
+    background-color: #213448;
+    border-color: #213448;
+  }
+  
+  .card .btn-outline-secondary {
+    border-color: #ECEFCA;
+    color: #000000;
+  }
+  
+  .card .btn-outline-secondary:hover {
+    background-color: #d5eafc;
+    color: #213448;
+  }
+  
+  .card .alert-danger {
+    background-color: rgba(236, 239, 202, 0.15);
+    border-color: #ECEFCA;
+    color: #ECEFCA;
+  }
+  
+  .card img {
+    border-radius: 8px;
+    border: 2px solid #547792;
+  }
+  
