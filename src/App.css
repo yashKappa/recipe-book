@@ -162,3 +162,47 @@
     margin-top: 3rem;
   }
 }
+
+@media (max-width: 300px) {
+  .custom-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw; /* as requested earlier */
+    max-width: 400px;
+    height: 100vh;
+    background-color: #213448; /* Deep navy */
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1050;
+    display: flex;
+    flex-direction: column;
+    color: #ECEFCA; /* Pale yellow text */
+  }
+}
+
+@media (max-width: 253px) {
+
+  .nav strong img{
+    width: 30px;
+    height: 30px;
+    padding: 0%;
+    margin: 0%;
+  }
+
+  .nav strong{
+    font-weight: 300;
+    display: flex;
+    padding: 0%;
+    margin: 0%;
+  }
+
+  .menu-icon{
+    display: flex;
+    font-size: 20px;
+    padding: 0%;
+    margin: 0%;
+  }
+}

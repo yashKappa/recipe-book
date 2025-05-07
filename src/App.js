@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import Form from './components/Form';
 import View from './components/View';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -13,7 +13,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light px-3">
      <div className='nav'>
      <Link className="navbar-brand d-flex align-items-center" to="/">
@@ -48,7 +48,7 @@ function App() {
           <h5>Menu</h5>
           <button className="btn-close" onClick={toggleDrawer}></button>
         </div>
-        <img alt='banner' src='./banner.jpg' />
+        <img alt='banner' src={`${process.env.PUBLIC_URL}/banner.jpg`} />
         <ul className="drawer-links">
         <li><Link to="/" onClick={toggleDrawer}>👁️‍🗨️ View Recipes</Link></li>
           <li><Link to="/add" onClick={toggleDrawer}>✚ Add Recipe</Link></li>
@@ -61,7 +61,7 @@ function App() {
           <Route path="/add" element={<Form />} />
         </Routes>
       </div>
-    </Router>
+    </>
   );
 }
 

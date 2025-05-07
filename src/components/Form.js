@@ -54,7 +54,7 @@ function Form() {
       {error && <div className="alert alert-danger">{error}</div>}
       
       <div className="mb-3">
-        <label className="form-label">📝 Recipe Name</label>
+        <label className="form-label"> 🎯 Recipe Name</label>
         <input className="form-control" placeholder='Matar Paneer' value={name} onChange={e => setName(e.target.value)} />
       </div>
 

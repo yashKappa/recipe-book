@@ -22,7 +22,7 @@ function View() {
 
   return (
     <div className='view-container'>
-      <h3 className="mb-4">All Recipes</h3>
+      <h3 className="mb-4"> 🍲 All Recipes</h3>
 
       <input
         type="text"
@@ -35,11 +35,14 @@ function View() {
       {viewRecipe ? (
         <div className="cards p-4">
          <div className='card-data'>
-         <img src={viewRecipe.image} alt="recipe" className="img-fluid mb-3 view" />
-          <h4>{viewRecipe.name}</h4>
-          <p><strong>Ingredients:</strong></p>
+         <h3> 🎯 {viewRecipe.name} Recipe</h3>
+          <div className='View-img'>
+          <img src={viewRecipe.image} alt="recipe" className="img-fluid mb-3 view" />
+          </div>
+          <h4>🎯 {viewRecipe.name}</h4>
+          <p><strong>🥗 Ingredients:</strong></p>
           <p>{viewRecipe.ingredients}</p>
-          <p><strong>Steps:</strong></p>
+          <p><strong>👩‍🍳 Steps:</strong></p>
           <ul>{viewRecipe.steps.map((step, i) => <li key={i}>{step}</li>)}</ul>
           <button className="btn btn-secondary mt-3" onClick={() => setViewRecipe(null)}>Back</button>
          </div>
