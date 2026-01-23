@@ -1,0 +1,47 @@
+/* src/components/PopUp/PopUp.css */
+
+.popup-overlay {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  z-index: 1000;
+  pointer-events: none; /* allow clicks to pass through overlay */
+}
+
+.popup-container {
+  background-color: #fcb00e;
+  color: #000;
+  padding: 8px 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  pointer-events: auto; /* allow clicks inside container */
+  transform: translateX(100%); /* start off-screen right */
+  animation: slideIn 0.5s forwards, fadeOut 0.5s 3.5s forwards; /* slide in and fade out */
+  position: relative;
+}
+
+/* Close button */
+.popup-close {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  border: none;
+  background: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #000;
+}
+
+/* Slide in from right */
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Fade out after 4 seconds */
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
