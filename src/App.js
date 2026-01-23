@@ -107,21 +107,23 @@ function App() {
         </div>
 
         <ul className="drawer-links">
-          <li><Link to="/" onClick={toggleDrawer}>View Recipes</Link></li>
-          <li><Link to="/add" onClick={toggleDrawer}>Add Recipe</Link></li>
-          <li><Link to="/Search" onClick={toggleDrawer}>Search</Link></li>
+          {/* <li><Link to="/" onClick={toggleDrawer}>View Recipes</Link></li>
+          <li><Link to="/add" onClick={toggleDrawer}>Add Recipe</Link></li> */}
+          <li><Link to="/" onClick={toggleDrawer}><i className="fa-solid fa-lightbulb"></i> Recommendation</Link></li>
+          <li><Link to="/Search" onClick={toggleDrawer}><i className="fa-solid fa-magnifying-glass"></i> Search</Link></li>
+          <li><Link to="/Watchlist" onClick={toggleDrawer}><i className="fa-solid fa-star"></i> Watchlist</Link></li>
 
           <li>
             {user ? (
               <button className="btn btn-danger w-100" onClick={handleLogout}>
-                Logout
+               <i className="fa-solid fa-right-from-bracket"></i> Logout
               </button>
             ) : (
               <button className="btn btn-warning w-100" onClick={() => {
                 setShowAuth(true);
                 toggleDrawer();
               }}>
-                Login
+               <i className="fa-solid fa-right-to-bracket"></i> Login
               </button>
             )}
           </li>
