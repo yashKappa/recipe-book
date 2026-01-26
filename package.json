@@ -1,5 +1,4 @@
 {
-  "homepage": "https://yashkappa.github.io/recipe-book/",
   "name": "recipe-book",
   "version": "0.1.0",
   "private": true,
@@ -13,7 +12,7 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router": "^6.11.2",
-    "react-router-dom": "^6.11.2",
+    "react-router-dom": "^6.30.3",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
